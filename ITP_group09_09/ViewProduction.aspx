@@ -1,11 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductionMain.aspx.cs" Inherits="ITP_group09_09.ProductionMain" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewProduction.aspx.cs" Inherits="ITP_group09_09.ViewProduction" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-   
+<html lang="en">
+<head>
 
     <meta charset="UTF-8">
     <title>WAGAWATTE ASPHALT PLANT</title>
@@ -27,25 +24,15 @@
             margin-bottom: 12px
         }
         .auto-style1 {
-            margin-left: 40px;
-        }
-        .auto-style9 {
-            height: 29px;
-            width: 207px;
-        }
-        .auto-style10 {
-            width: 207px;
-        }
-        .auto-style11 {
-            width: 207px;
-            height: 43px;
+            margin-left: 0px;
         }
     </style>
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="height:100%">
+    
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
         <!-- Avatar image in top left corner -->
         <img src="logo.png" style="width: 100%;" onclick="window.location.href='EmployeeManagement.html'">
 
-        <a href="ViewProduction.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <a href="ViewProduction.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
            
             <p style="font:bold 18px arial">View Production</p>
         </a>
@@ -63,29 +50,30 @@
             <p style="font:bold 18px arial">Reports</p>
 
         </a>
-       <a href="ProductionMain.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-       
-            <p style="font:bold 18px arial">HOME</p>
-
-        </a>
     </nav>
-
 </head>
 <body>
-    <form id="form1" runat="server">
-       <div id="home" style="background-color:#EAB309">
+    <div id="home" style="background-color:#EAB309">
         <p align="center" style=" height :158px;font-size:75px ;margin-top:0px;margin-left:190px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" > WAGAWATTE ASPHALT PLANT</p>
-       
-    </div>
-
         
-
-    <div style="margin-left:350px">
-        <button>View Production</button>
-
-    </div>
-    <div style="margin-left:200px">
+   </div>
+    <form runat="server">
+    <div style="margin-left:350px;">
+        <h2 style="color:red;margin-left:350px;">View Production</h2>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="130px" Width="831px" CssClass="auto-style1">
+        <Columns>
+            <asp:BoundField DataField="Kg" HeaderText="Kg" SortExpression="Kg" />
+            <asp:BoundField DataField="bitument" HeaderText="bitument" SortExpression="bitument" />
+            <asp:BoundField DataField="bitumenKG" HeaderText="bitumenKG" SortExpression="bitumenKG" />
+            <asp:BoundField DataField="materialKG" HeaderText="materialKG" SortExpression="materialKG" />
+        </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Kg], [bitument], [bitumenKG], [materialKG] FROM [prodtable]"></asp:SqlDataSource>
     </div>
     </form>
+
+  
+
+
 </body>
 </html>
