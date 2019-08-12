@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminHome.html" />
+    <Content Include="cal.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -133,8 +134,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="icons8-factory-64.png" />
+    <Content Include="order.png" />
+    <Content Include="prodIcon.png" />
+    <Content Include="prodmainst.css" />
+    <Content Include="report.png" />
     <Content Include="ViewProduction.aspx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="ViewOrder.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="logo.png" />
     <Content Include="Production.aspx" />
@@ -277,6 +284,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOrder.aspx.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewOrder.aspx.designer.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

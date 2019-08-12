@@ -9,6 +9,9 @@
 
     <meta charset="UTF-8">
     <title>WAGAWATTE ASPHALT PLANT</title>
+    <link rel ="stylesheet" href="prodmainst.css" />
+    
+   
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,24 +29,14 @@
         .w3-row-padding img {
             margin-bottom: 12px
         }
-        .auto-style1 {
-            margin-left: 40px;
+        .auto-style3 {
+            width: 79px;
+            height: 64px;
         }
-        .auto-style9 {
-            height: 29px;
-            width: 207px;
-        }
-        .auto-style10 {
-            width: 207px;
-        }
-        .auto-style11 {
-            width: 207px;
-            height: 43px;
-        }
-    </style>
+        </style>
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="height:100%">
         <!-- Avatar image in top left corner -->
-        <img src="logo.png" style="width: 100%;" onclick="window.location.href='EmployeeManagement.html'">
+        <img src="logo.png" style="width: 100%;" onclick="window.location.href='ProductionMain.aspx'">
 
         <a href="ViewProduction.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
            
@@ -53,12 +46,12 @@
             <p style="font:bold 18px arial">Calculate Daily Production</p>
 
         </a>
-        <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <a href="ViewOrder.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
            
             <p style="font:bold 18px arial">View Orders </p>
 
         </a>
-        <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
        
             <p style="font:bold 18px arial">Reports</p>
 
@@ -81,10 +74,21 @@
         
 
     <div style="margin-left:350px">
-        <button>View Production</button>
 
     </div>
-    <div style="margin-left:200px">
+    <div style="margin-left:350px">
+        <button class="button" style="vertical-align:middle">
+            <img class="auto-style3" src="prodIcon.png" /><br /><a href="ViewProduction.aspx" style="text-decoration:none"> View Production</></a></button>
+
+        <button class="button" style="vertical-align:middle; margin-left:450px" >
+            <img class="auto-style3" src="cal.png" /><br /><a href="Production.aspx" style="text-decoration:none">Calculate Production</></button>
+    </div>
+        <br />
+        <div style="margin-left:350px">
+        <button class="button" style="vertical-align:middle">
+            <img class="auto-style3" src="order.png" /><br /><a href="ViewOrder.aspx" style="text-decoration:none">View Orders</></button>
+        <button class="button" style="vertical-align:middle ; margin-left:450px">
+            <img class="auto-style3" src="report.png" /><br /><a href="ViewOrder.aspx" style="text-decoration:none">Generate Reports</></button>
     </div>
     </form>
 </body>
